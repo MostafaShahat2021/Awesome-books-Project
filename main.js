@@ -47,3 +47,22 @@ function removeBook(id) {
     allBooks = allBooks.filter((book) => book.id !== index)
     bookGenerator()
 }
+
+
+document.querySelectorAll('.input').forEach((input) => {
+    input.addEventListener('input',(event) => {
+        event.preventDefault();
+
+
+        const title = document.querySelector('.title-input').value;
+        const author = document.querySelector('.author-input').value;
+
+
+        const myBook = {
+            Title: title,
+            Author: author,
+        };
+
+        localStorage.setItem('books', JSON.stringify(myBook));
+    });
+});
