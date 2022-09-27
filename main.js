@@ -47,3 +47,19 @@ section.addEventListener('click', (event) => {
     removeBook(event.target.id);
   }
 });
+
+document.querySelectorAll('.input').forEach((input) => {
+  input.addEventListener('input', (event) => {
+    event.preventDefault();
+
+    const title = document.querySelector('.title-input').value;
+    const author = document.querySelector('.author-input').value;
+
+    const myBook = {
+      Title: title,
+      Author: author,
+    };
+
+    localStorage.setItem('books', JSON.stringify(myBook));
+  });
+});
