@@ -29,6 +29,7 @@ Basic website that allows users to add/remove books from a list.
 - Add Form to save books .
 - use Local storage to save user data.
 - User can add books and can remoove it from the list.
+- Using classes instead of Objects.
 
 ## Getting Started
 
