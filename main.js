@@ -12,11 +12,12 @@ function updateLocalStorage() {
 function createListOfBooks(arr) {
   let books = '';
   for (let i = 0; i < arr.length; i += 1) {
+    let liClass = 'dark-bakcground';
+    if (i % 2 === 0) {
+      liClass = 'book-li';
+    }
     books += `
-            <li>${arr[i].title}</li> <br />
-            <li>${arr[i].author}</li> <br />
-           <li><button onclick="removeBook(${i})">Remove</button></li>
-            <hr />
+            <li class= '${liClass}'>${arr[i].title} by ${arr[i].author} <button onclick="removeBook(${i})">Remove</button></li> <br />
             `;
   }
   return books;
@@ -30,20 +31,31 @@ function showBooks() {
           `;
 }
 
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
+function clearFields() {
+  document.querySelector('.book-title').value = '';
+  document.querySelector('.author-name').value = '';
+}
+
 function addNewBook(bookTitle, bookAuthor) {
-  const myBook = {
-    title: bookTitle,
-    author: bookAuthor,
-  };
+  const myBook = new Book(bookTitle, bookAuthor);
   Localstoragebook.push(myBook);
   updateLocalStorage();
   showBooks();
+  clearFields();
 }
 
 function removeBook(i) {
   Localstoragebook.splice(i, 1);
   updateLocalStorage();
   showBooks();
+  clearFields();
 }
 
 const form = document.querySelector('form');

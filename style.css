@@ -11,7 +11,7 @@ h1 {
 
 .container {
   border: 2px solid black;
-  width: 90%;
+  width: 50%;
   margin: 1rem auto;
 }
 
@@ -29,7 +29,7 @@ form {
 }
 
 hr {
-  width: 50%;
+  width: 25%;
   margin: 1rem auto;
 }
 
@@ -56,4 +56,31 @@ hr {
 
 .book-ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.dark-bakcground {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background-color: #d3d3d3;
+}
+
+button {
+  box-shadow: 3px 3px black;
+  cursor: pointer;
+  outline: none;
 }
