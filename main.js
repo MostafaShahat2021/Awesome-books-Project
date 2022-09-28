@@ -34,17 +34,24 @@ class Book {
   }
 }
 
+function clearFields(){
+  document.querySelector('.book-title').value = '';
+  document.querySelector('.author-name').value = '';
+}
+
 function addNewBook(bookTitle, bookAuthor) {
   const myBook = new Book(bookTitle, bookAuthor);
   Localstoragebook.push(myBook);
   updateLocalStorage();
   showBooks();
+  clearFields();
 }
 
 function removeBook(i) {
   Localstoragebook.splice(i, 1);
   updateLocalStorage();
   showBooks();
+  clearFields();
 }
 
 const form = document.querySelector('form');
