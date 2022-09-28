@@ -60,7 +60,6 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
 }
 
 .book-li {
@@ -81,6 +80,7 @@ hr {
 }
 
 button {
+  box-shadow: 3px 3px black;
   cursor: pointer;
   outline: none;
 }
