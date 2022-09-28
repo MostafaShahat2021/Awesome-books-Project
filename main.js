@@ -13,10 +13,7 @@ function createListOfBooks(arr) {
   let books = '';
   for (let i = 0; i < arr.length; i += 1) {
     books += `
-            <li>${arr[i].title}</li> <br />
-            <li>${arr[i].author}</li> <br />
-            <li><button onclick="removeBook(${i})">Remove</button></li>
-            <hr />
+            <li class= 'book-li'>${arr[i].title} by ${arr[i].author} <button onclick="removeBook(${i})">Remove</button></li> <br />
             `;
   }
   return books;

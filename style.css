@@ -29,7 +29,7 @@ form {
 }
 
 hr {
-  width: 50%;
+  width: 25%;
   margin: 1rem auto;
 }
 
@@ -56,4 +56,17 @@ hr {
 
 .book-ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.book-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
 }
