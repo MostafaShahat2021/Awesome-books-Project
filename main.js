@@ -12,6 +12,8 @@ const authorName = document.querySelector('.author-input');
 function bookGenerator() {
   if (titleInput.value !== '' || authorName.value !== '') {
     const newBook = new Book(titleInput.value, authorName.value, allBooks.length);
+    // use random function & use this id // const bookId = Math.floor(Math.random() * 100000);
+
     allBooks.push(newBook);
   }
 
@@ -48,18 +50,5 @@ section.addEventListener('click', (event) => {
   }
 });
 
-document.querySelectorAll('.input').forEach((input) => {
-  input.addEventListener('input', (event) => {
-    event.preventDefault();
-
-    const title = document.querySelector('.title-input').value;
-    const author = document.querySelector('.author-input').value;
-
-    const myBook = {
-      Title: title,
-      Author: author,
-    };
-
-    localStorage.setItem('books', JSON.stringify(myBook));
-  });
-});
+// const body = document.getElementsByTagName('body');
+// const bokkInfo = localStorage.getItem('bookInfo');
