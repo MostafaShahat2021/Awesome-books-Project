@@ -15,6 +15,19 @@ h1 {
   margin: 1rem auto;
 }
 
+form {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-title,
+.author-name {
+  margin: 1rem;
+}
+
 hr {
   width: 50%;
   margin: 1rem auto;
@@ -28,4 +41,19 @@ hr {
 
 .new-book input {
   margin: 0.5rem;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.add-book form {
+  margin: 15px;
+}
+
+.book-ul {
+  list-style: none;
 }
