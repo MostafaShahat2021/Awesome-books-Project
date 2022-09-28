@@ -11,7 +11,7 @@ h1 {
 
 .container {
   border: 2px solid black;
-  width: 90%;
+  width: 50%;
   margin: 1rem auto;
 }
 
@@ -60,7 +60,7 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 5px;
 }
 
 .book-li {
@@ -68,5 +68,19 @@ hr {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
+  padding: 5px;
+}
+
+.dark-bakcground {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background-color: #d3d3d3;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
 }
