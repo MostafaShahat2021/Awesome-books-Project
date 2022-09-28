@@ -15,7 +15,7 @@ function createListOfBooks(arr) {
     books += `
             <li>${arr[i].title}</li> <br />
             <li>${arr[i].author}</li> <br />
-           <li><button onclick="removeBook(${i})">Remove</button></li>
+            <li><button onclick="removeBook(${i})">Remove</button></li>
             <hr />
             `;
   }
@@ -30,11 +30,15 @@ function showBooks() {
           `;
 }
 
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
 function addNewBook(bookTitle, bookAuthor) {
-  const myBook = {
-    title: bookTitle,
-    author: bookAuthor,
-  };
+  const myBook = new Book(bookTitle, bookAuthor);
   Localstoragebook.push(myBook);
   updateLocalStorage();
   showBooks();
