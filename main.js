@@ -38,7 +38,7 @@ class Book {
   }
 }
 
-function clearFields(){
+function clearFields() {
   document.querySelector('.book-title').value = '';
   document.querySelector('.author-name').value = '';
 }
