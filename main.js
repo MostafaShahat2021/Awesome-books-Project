@@ -91,7 +91,6 @@ const currentDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear
 const currenttime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 showDate.innerHTML = `${currentDate.toString()} ${currenttime}`;
 
-
 listLink.addEventListener('click', (e) => {
   e.preventDefault();
   titleBookOne.style.display = 'block';
@@ -114,4 +113,4 @@ contactLink.addEventListener('click', (e) => {
   listOfBooks.style.display = 'none';
   contactSection.style.display = 'block';
   titleBookOne.style.display = 'none';
-})
+});
