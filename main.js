@@ -67,3 +67,17 @@ form.addEventListener('submit', (e) => {
 });
 
 window.onload = showBooks();
+
+const topNav = document.querySelector('.top-nav');
+// console.log(topNav);
+const contactLink = document.querySelector('.contact-us');
+// console.log(contactLink);
+const listOfBooks = document.querySelector('.container');
+// console.log(listOfBooks);
+const booksection = document.querySelector('.add-book');
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  // console.log('Okay');
+  listOfBooks.style.display = 'none';
+  booksection.style.display = 'none';
+});
