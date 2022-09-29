@@ -68,16 +68,28 @@ form.addEventListener('submit', (e) => {
 
 window.onload = showBooks();
 
-const topNav = document.querySelector('.top-nav');
-// console.log(topNav);
+// ======== NAVIGATIONS =================
+
 const contactLink = document.querySelector('.contact-us');
 // console.log(contactLink);
 const listOfBooks = document.querySelector('.container');
 // console.log(listOfBooks);
 const booksection = document.querySelector('.add-book');
+const listLink = document.querySelector('.list');
+const contactSection = document.querySelector('.contact');
+const addNewLink = document.querySelector('.add-new');
+// console.log(addNewLink);
 contactLink.addEventListener('click', (e) => {
   e.preventDefault();
   // console.log('Okay');
+  contactSection.style.display = 'block';
   listOfBooks.style.display = 'none';
+  booksection.style.display = 'none';
+});
+
+listLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  listOfBooks.style.display = 'block';
+  contactSection.style.display = 'none';
   booksection.style.display = 'none';
 });
