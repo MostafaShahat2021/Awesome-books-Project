@@ -79,6 +79,18 @@ const listLink = document.querySelector('.list');
 const contactSection = document.querySelector('.contact');
 const addNewLink = document.querySelector('.add-new');
 // console.log(addNewLink);
+
+const contactDate = document.querySelector('.date');
+const localDate = Date();
+// console.log(localDate);
+const date = new Date();
+const month = date.getUTCMonth() + 1;
+const day = date.getUTCDate();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const fainalDate = `${hours}:${minutes}`;
+
+contactDate.innerHTML = `${fainalDate}`;
 contactLink.addEventListener('click', (e) => {
   e.preventDefault();
   // console.log('Okay');
@@ -92,4 +104,11 @@ listLink.addEventListener('click', (e) => {
   listOfBooks.style.display = 'block';
   contactSection.style.display = 'none';
   booksection.style.display = 'none';
+});
+
+addNewLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  booksection.style.display = 'block';
+  listOfBooks.style.display = 'none';
+  contactSection.style.display = 'none';
 });
