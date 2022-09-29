@@ -25,6 +25,8 @@ function createListOfBooks(arr) {
 
 function showBooks() {
   const listOfBooks = document.querySelector('.container');
+  // listOfBooks.creatElement('h2');
+  // listOfBooks.innerText = 'All Awesome Books';
   listOfBooks.innerHTML = `
               <ul class="book-ul"/>
               ${createListOfBooks(Localstoragebook)}</ul>
@@ -79,6 +81,8 @@ const listLink = document.querySelector('.list');
 const contactSection = document.querySelector('.contact');
 const addNewLink = document.querySelector('.add-new');
 // console.log(addNewLink);
+const titleBookOne = document.querySelector('.books-title');
+// console.log(titleBook);
 
 const contactDate = document.querySelector('.date');
 const localDate = Date();
@@ -97,10 +101,12 @@ contactLink.addEventListener('click', (e) => {
   contactSection.style.display = 'block';
   listOfBooks.style.display = 'none';
   booksection.style.display = 'none';
+  titleBookOne.style.display = 'none';
 });
 
 listLink.addEventListener('click', (e) => {
   e.preventDefault();
+  titleBookOne.style.display = 'block';
   listOfBooks.style.display = 'block';
   contactSection.style.display = 'none';
   booksection.style.display = 'none';
@@ -111,4 +117,5 @@ addNewLink.addEventListener('click', (e) => {
   booksection.style.display = 'block';
   listOfBooks.style.display = 'none';
   contactSection.style.display = 'none';
+  titleBookOne.style.display = 'none';
 });
