@@ -84,25 +84,13 @@ const addNewLink = document.querySelector('.add-new');
 const titleBookOne = document.querySelector('.books-title');
 // console.log(titleBook);
 
-const contactDate = document.querySelector('.date');
-const localDate = Date();
-// console.log(localDate);
+// Date and Time
+const showDate = document.querySelector('.our-date');
 const date = new Date();
-const month = date.getUTCMonth() + 1;
-const day = date.getUTCDate();
-const hours = date.getHours();
-const minutes = date.getMinutes();
-const fainalDate = `${hours}:${minutes}`;
+const dateNow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+showDate.innerHTML = `${dateNow.toString()} ${time}`;
 
-contactDate.innerHTML = `${fainalDate}`;
-contactLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  // console.log('Okay');
-  contactSection.style.display = 'block';
-  listOfBooks.style.display = 'none';
-  booksection.style.display = 'none';
-  titleBookOne.style.display = 'none';
-});
 
 listLink.addEventListener('click', (e) => {
   e.preventDefault();
@@ -119,3 +107,11 @@ addNewLink.addEventListener('click', (e) => {
   contactSection.style.display = 'none';
   titleBookOne.style.display = 'none';
 });
+
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  booksection.style.display = 'none';
+  listOfBooks.style.display = 'none';
+  contactSection.style.display = 'block';
+  titleBookOne.style.display = 'none';
+})

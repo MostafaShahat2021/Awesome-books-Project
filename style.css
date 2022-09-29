@@ -133,8 +133,12 @@ footer {
   width: 90%;
   border-radius: 10px;
   height: 50px;
-  /* margin-top: 180px; */
+  position: fixed;
   margin: 1rem auto;
+  margin-bottom: 12px;
+  position: fixed;
+  bottom: 25px;
+  left: 60px;
 }
 
 footer p {
@@ -166,4 +170,11 @@ footer p {
 .books-title {
   text-align: center;
   display: none;
+}
+
+.our-date {
+  display: flex;
+  justify-content: end;
+  margin-right: 65px;
+  margin-top: 20px;
 }
