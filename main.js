@@ -87,9 +87,9 @@ const titleBookOne = document.querySelector('.books-title');
 // Date and Time
 const showDate = document.querySelector('.our-date');
 const date = new Date();
-const dateNow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
-const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-showDate.innerHTML = `${dateNow.toString()} ${time}`;
+const currentDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+const currenttime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+showDate.innerHTML = `${currentDate.toString()} ${currenttime}`;
 
 
 listLink.addEventListener('click', (e) => {
